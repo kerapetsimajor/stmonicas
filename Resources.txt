@@ -1,0 +1,5 @@
+Hero Slider
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_gallery
+
+Gallery scroll
+https://codepen.io/mahish/pen/RajmQw?editors=0010
