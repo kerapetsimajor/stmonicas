@@ -456,6 +456,8 @@ img {
 }
 .principal-photo {
   width: 100%;
+  height: auto;
+  max-width: 20rem;
   border-radius: 10px;
 }
 .principal-message {
