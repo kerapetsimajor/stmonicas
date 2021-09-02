@@ -309,7 +309,9 @@ btn = 20
 .lm:hover {
   text-decoration: none;
 }
-
+.lm-link {
+  color: var(--accent-hover);
+}
 /* HELPER/SETTINGS CLASSES */
 .margin-right-sm {
   margin-right: 1.6rem !important;
@@ -325,4 +327,5 @@ btn = 20
 
 strong {
   font-weight: 500;
+  color: var(--gray-500);
 }

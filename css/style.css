@@ -3,8 +3,8 @@
 /************************************/
 
 :root {
-  --primary-color: #cc0202;
-  --secondary-color: #a8233a;
+  --primary-color: #900;
+  --secondary-color: #800;
   --accent-color: #113276;
   --accent-hover: #0d2558;
 
@@ -374,7 +374,7 @@ img {
 }
 .event-summary {
   position: relative;
-  padding-left: 6.6875rem;
+  padding-left: 7.6875rem;
   min-height: 4.8125rem;
   margin-bottom: 2.5rem;
 }
@@ -834,7 +834,10 @@ span {
 .min-list {
   list-style: none;
 }
-
+.about-heading {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 /************************************************************************/
 /********************* Events Page *********************/
 /************************************************************************/
@@ -872,10 +875,66 @@ span {
 /********************* Sports Page *********************/
 /************************************************************************/
 .event-section {
-  padding: 5rem 3rem;
+  padding: 5rem 6rem;
 }
 figure img {
   width: 100%;
   height: auto;
-  max-width: 50%;
+}
+.sports-bulletins {
+  row-gap: 4.4rem !important;
+  column-gap: 3rem !important;
+}
+.sports-bulletin {
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2),
+    1px 1px 2px rgba(0, 0, 0, 0.2);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.sports-bulletin_content {
+  padding: 1rem;
+  border-radius: 5px;
+}
+.category-nav {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+
+/************************************************************************/
+/********************* Blog Page *********************/
+/************************************************************************/
+
+.news-section {
+  padding: 5rem 0;
+}
+.post-item__title {
+  margin-bottom: 2rem !important;
+}
+.metabox-blog--item {
+  display: inline-block;
+  margin-bottom: 1rem;
+  background-color: #f4e6b1;
+}
+.blog-content__text {
+  margin-bottom: 1rem;
+}
+.blog-heading {
+  margin-bottom: 1rem !important;
+}
+.blog-post--title {
+  /* font-weight: 500; */
+  margin-bottom: 0.75rem;
+  color: var(--accent-color);
+}
+.blog-post--title:hover {
+  color: var(--accent-hover);
+  text-decoration: none;
+}
+.blog-rm {
+  padding: 1rem 2rem !important;
+  font-weight: 400 !important;
+  background-color: var(--accent-color) !important;
+}
+.blog-rm:hover {
+  background-color: var(--accent-hover);
 }
