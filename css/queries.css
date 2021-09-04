@@ -11,24 +11,405 @@
 }
 
 /**************************/
-/* BELOW 944px (Tablets) */
+/* BELOW 1120px (Tablets) */
 /**************************/
-@media (max-width: 59em) {
+
+@media (max-width: 70em) {
   html {
-    font-size: 12px;
+    font-size: 80.5%;
   }
-  #content-slider .slider-thumb .head {
-    display: none;
+  /* --- Header --- */
+  .top-contact-items {
+    gap: 1rem;
+  }
+  .top-nav-items {
+    gap: 2rem;
+  }
+  .top-social-items {
+    gap: 2rem;
+  }
+  .main-nav-list {
+    gap: 2rem;
+  }
+  .main-nav-link.nav-cta:visited {
+    padding: 1rem 2rem !important;
+  }
+
+  /* --- Sports Updates --- */
+  .sports-updates {
+    gap: 1rem !important;
+  }
+  .sports-news__img,
+  .sports-news__post {
+    max-width: 100%;
+  }
+  .sports-news__post-heading {
+    margin-bottom: 0.5rem;
   }
 }
 
 /**************************/
-/* BELOW 704px (Smaller tablets) */
+/* BELOW 944px (Tablets) */
 /**************************/
+@media (max-width: 59em) {
+  html {
+    font-size: 80.5%;
+  }
+  /* --- Header --- */
+  .top-nav {
+    padding: 2rem 3rem;
+  }
+  .top-contact-lists:last-child {
+    display: none;
+  }
+  .top-nav-items {
+    gap: 1rem;
+  }
+  .list-icon {
+    font-size: 32px;
+  }
+  .header {
+    padding: 1rem 3rem;
+  }
+  .logo {
+    height: 5rem;
+  }
+  .main-nav {
+    display: none;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  /* --- Slider --- */
+  #content-slider .slider-thumb img {
+    display: none;
+  }
+
+  /* --- School Life --- */
+  .school-life {
+    padding: 2rem 0;
+  }
+  .school-life__column {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    row-gap: 2rem;
+  }
+  .list-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .featured-items {
+    gap: 0.5rem;
+  }
+  .featured--heading {
+    margin-bottom: 0.3rem;
+  }
+
+  /* --- Events Section --- */
+  .events-children {
+    grid-template-columns: 1fr;
+    row-gap: 0rem;
+  }
+  .full-width-list.events-content {
+    max-width: 70%;
+  }
+  .event-summary {
+    margin-bottom: 3.5rem;
+  }
+  .events-news {
+    padding: 3rem 2.5rem;
+  }
+  .t-center {
+    text-align: left;
+  }
+
+  /* --- Principal Section --- */
+  .principal-section {
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    max-width: 80%;
+  }
+  .principal-title {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  .principal-subheading {
+    margin-bottom: 1.2rem;
+  }
+  .principal-column {
+    margin-top: 0;
+  }
+  .principal-photo {
+    max-width: 100%;
+  }
+
+  /* --- Gallery Section --- */
+  .gallery-section {
+    padding: 5rem 0;
+  }
+  .item {
+    height: auto;
+    max-width: 100%;
+  }
+  .paddles {
+    display: none;
+  }
+  .gallery-items {
+    height: auto;
+    overflow-x: scroll;
+  }
+  .gallery-wrapper {
+    height: auto;
+  }
+
+  /* --- Sports Update Section --- */
+  .sports-section {
+    padding: 3rem 0;
+  }
+  .sports-updates {
+    margin-bottom: 2rem;
+  }
+  .sports-update__section {
+    flex-wrap: wrap;
+  }
+  .sports-news__featured-img {
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+  }
+  .sports-news__post {
+    max-width: 90%;
+  }
+  .sports-news__featured-heading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.725rem 0rem;
+  }
+  .sports__featured-text {
+    font-size: 1.279rem;
+  }
+  .sports-news__img,
+  .sports-news__post {
+    max-width: 100%;
+  }
+  .sports-news__post-heading {
+    font-size: 1.275rem;
+  }
+  .sports-news__post-text {
+    font-size: 1.2575rem;
+  }
+
+  /* --- School Results Section --- */
+  .school-results__section {
+    padding: 3rem 0;
+  }
+  .school-results__heading {
+    margin-bottom: 2rem;
+  }
+  .school-results {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.6rem !important;
+    column-gap: 1.6rem !important;
+  }
+  .grade-results {
+    padding: 0rem;
+    border-radius: 5px;
+  }
+
+  /* --- Footer --- */
+  .main-footer__bg {
+    padding: 3rem 0;
+  }
+  .main-footer {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3rem;
+    row-gap: 3rem;
+  }
+  .footer-logo {
+    width: 80px;
+  }
+
+  #content-slider .head {
+    display: none;
+  }
+}
+
+/*********************************/
+/* BELOW 704px (Smaller tablets) */
+/*********************************/
 @media (max-width: 44em) {
   html {
-    font-size: 10px;
+    font-size: 70.5%;
   }
+  /* --- Header --- */
+  .top-nav {
+    display: none;
+  }
+  .header {
+    padding: 1rem 3rem;
+  }
+  .logo {
+    height: 5rem;
+  }
+  .main-nav {
+    display: none;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  /* --- Slider --- */
+  #content-slider .slider-thumb img {
+    display: none;
+  }
+
+  /* --- School Life --- */
+  .school-life {
+    padding: 2rem 0;
+  }
+  .school-life__column {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    row-gap: 2rem;
+  }
+  .list-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .featured-items {
+    gap: 0.5rem;
+  }
+  .featured--heading {
+    margin-bottom: 0.3rem;
+  }
+
+  /* --- Events Section --- */
+  .events-children {
+    grid-template-columns: 1fr;
+    row-gap: 0rem;
+  }
+  .event-summary {
+    margin-bottom: 3.5rem;
+  }
+  .events-news {
+    padding: 3rem 2.5rem;
+  }
+  .t-center {
+    text-align: left;
+  }
+
+  /* --- Principal Section --- */
+  .principal-section {
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+  .principal-title {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  .principal-subheading {
+    margin-bottom: 1.2rem;
+  }
+  .principal-column {
+    margin-top: 0;
+    flex-direction: column-reverse;
+  }
+  .principal-photo {
+    max-width: 100%;
+  }
+
+  /* --- Gallery Section --- */
+  .gallery-section {
+    padding: 5rem 0;
+  }
+  .item {
+    height: auto;
+    max-width: 100%;
+  }
+  .paddles {
+    display: none;
+  }
+  .gallery-items {
+    height: auto;
+    overflow-x: scroll;
+  }
+  .gallery-wrapper {
+    height: auto;
+  }
+
+  /* --- Sports Update Section --- */
+  .sports-section {
+    padding: 3rem 0;
+  }
+  .sports-updates {
+    margin-bottom: 2rem;
+  }
+  .sports-update__section {
+    flex-wrap: wrap;
+  }
+  .sports-news__featured-img {
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+  }
+  .sports-news__post {
+    max-width: 90%;
+  }
+  .sports-news__featured-heading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.725rem 0rem;
+  }
+  .sports__featured-text {
+    font-size: 1.279rem;
+  }
+  .sports-news__img,
+  .sports-news__post {
+    max-width: 100%;
+  }
+  .sports-news__post-heading {
+    font-size: 1.275rem;
+  }
+  .sports-news__post-text {
+    font-size: 1.2575rem;
+  }
+
+  /* --- School Results Section --- */
+  .school-results__section {
+    padding: 3rem 0;
+  }
+  .school-results__heading {
+    margin-bottom: 2rem;
+  }
+  .school-results {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.6rem !important;
+    column-gap: 1.6rem !important;
+  }
+  .grade-results {
+    padding: 0rem;
+    border-radius: 5px;
+  }
+
+  /* --- Footer --- */
+  .main-footer__bg {
+    padding: 3rem 0;
+  }
+  .main-footer {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3rem;
+    row-gap: 3rem;
+  }
+  .footer-logo {
+    width: 80px;
+  }
+
+  /* --- Sliders --- */
   #content-slider .slider .head {
     display: none;
   }
