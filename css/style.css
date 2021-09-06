@@ -217,7 +217,7 @@ main {
   color: var(--white-bg-text);
 }
 
-/************ Off Canvas Navigation ************/
+/* Off Canvas Navigation */
 #offCanvasNav {
   display: none;
   z-index: 9999;
@@ -236,24 +236,32 @@ main {
 }
 
 .off-canvas a {
-  padding: 8px 8px 8px 32px;
+  padding: 0.5rem 2rem;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 1.5625rem;
+  color: var(--white-bg-text);
   display: block;
   transition: 0.3s;
 }
-
 .off-canvas a:hover {
-  color: #f1f1f1;
+  color: var(--white-color);
 }
-
 .off-canvas .closebtn {
   position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  top: 2rem;
+  right: 1.5625rem;
+  font-size: 2.25rem;
+  margin-left: 3.125rem;
+}
+.nav-offcanvas {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.offcanvas-social {
+  font-size: 41px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /************************************/
@@ -356,9 +364,7 @@ img {
   clear: both;
 }
 
-/************************************/
 /* School Life Features */
-/************************************/
 .school-life {
   padding: 3rem 0;
   background-color: var(--accent-color);
@@ -391,9 +397,7 @@ img {
   color: var(--white-bg-text);
 }
 
-/************************************/
 /* Upcoming Events and News */
-/************************************/
 .events-children {
   column-gap: 0rem !important;
 }
@@ -472,9 +476,7 @@ img {
   line-height: 1.458rem;
 }
 
-/************************************/
 /* Princial Message Section */
-/************************************/
 .principal-section {
   margin: 0 auto;
   padding: 5rem 3.2rem;
@@ -508,9 +510,8 @@ img {
   line-height: 1.4;
   letter-spacing: 0.75px;
 }
-/************************************/
+
 /* Gallery Horizontal Scroll */
-/************************************/
 .gallery-section {
   padding: 5rem 0;
   background-color: var(--gray-50);
@@ -522,7 +523,6 @@ img {
   overflow-x: hidden;
   overflow-y: hidden;
 }
-
 .gallery-items {
   height: 270px; /* hide the scroll bar */
   white-space: nowrap;
@@ -530,14 +530,12 @@ img {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 }
-
 .item {
   display: inline-block;
   width: 220px;
   height: 100%;
   text-align: center;
 }
-
 .gallery-heading {
   font-size: 1.24rem;
   font-weight: 500;
@@ -546,7 +544,6 @@ img {
   padding-bottom: 1.5rem;
   text-align: center;
 }
-
 .paddle {
   position: absolute;
   top: 0;
@@ -565,19 +562,15 @@ img {
 .hidden {
   display: none;
 }
-
 .print {
   margin: auto;
   max-width: 500px;
 }
-
 span {
   display: inline-block;
 }
 
-/************************************/
 /* Sports and Athletics Updates */
-/************************************/
 .sports-section {
   padding: 5rem 0;
 }
@@ -651,9 +644,7 @@ span {
   grid-row: 3 / 4;
 }
 
-/************************************/
 /* School Results */
-/************************************/
 .school-results__section {
   padding: 5rem 0;
   background-color: var(--gray-50);
@@ -712,10 +703,7 @@ span {
   color: var(--primary-color);
 }
 
-/************************************/
 /* Footer */
-/************************************/
-
 .main-footer__bg {
   background-color: var(--accent-color);
   padding: 5rem 4rem;
@@ -764,9 +752,9 @@ span {
   text-decoration: none;
 }
 
-/************************************************************************/
-/********************* Interior Page *********************/
-/************************************************************************/
+/************************************/
+/* Interior Page */
+/************************************/
 .page-banner {
   padding: 10rem 0 5rem 0;
   background-color: #000;
@@ -782,7 +770,7 @@ span {
   right: 0;
 }
 .container--narrow {
-  max-width: 80rem;
+  max-width: 80%;
 }
 .page-banner__title,
 .page-banner__intro {
@@ -792,7 +780,6 @@ span {
   position: relative;
   z-index: 2;
 }
-
 .metabox {
   border-radius: 3px;
   padding: 10px 15px;
@@ -823,7 +810,6 @@ span {
 .metabox a:hover {
   text-decoration: underline;
 }
-
 .page-links {
   position: relative;
   z-index: 1;
@@ -868,11 +854,13 @@ span {
   color: #0a2b4b;
   background-color: #f2e3aa;
 }
+.interior-content {
+  column-gap: 6rem;
+}
 .interior-pages__text {
   grid-column: 1 / 3;
   padding-bottom: 5rem;
 }
-
 .min-list {
   list-style: none;
 }
@@ -880,10 +868,9 @@ span {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-/************************************************************************/
-/********************* Events Page *********************/
-/************************************************************************/
-
+/************************************/
+/* Events Page */
+/************************************/
 .event-column {
   padding: 5rem;
   max-width: 60rem;
@@ -898,9 +885,9 @@ span {
   margin: 2.5rem 0;
 }
 
-/************************************************************************/
-/********************* Event Page *********************/
-/************************************************************************/
+/************************************/
+/* Event Page */
+/************************************/
 .aside--img {
   width: 100%;
   height: auto;
@@ -913,11 +900,11 @@ span {
   margin-bottom: 5rem;
 }
 
-/************************************************************************/
-/********************* Sports Page *********************/
-/************************************************************************/
+/************************************/
+/* Sports Page */
+/************************************/
 .event-section {
-  padding: 5rem 6rem;
+  padding: 5rem 3.5rem;
 }
 figure img {
   width: 100%;
@@ -942,10 +929,9 @@ figure img {
   margin-bottom: 0.6rem;
 }
 
-/************************************************************************/
-/********************* Blog Page *********************/
-/************************************************************************/
-
+/************************************/
+/* Blog Page */
+/************************************/
 .news-section {
   padding: 5rem 0;
 }
@@ -981,35 +967,42 @@ figure img {
   background-color: var(--accent-hover);
 }
 
-/************************************************************************/
-/********************* Contact Page *********************/
-/************************************************************************/
-
+/************************************/
+/* Contact Page */
+/************************************/
 .contact-section {
-  padding: 9rem 0;
+  padding: 4rem 0;
 }
 .contact-page {
-  column-gap: 0 !important;
-  row-gap: 2.6rem !important;
-  /* padding: 5rem 2rem;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  background-color: var(--white-color); */
+  display: flex;
+  margin-bottom: 2rem;
 }
 .contact-us-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
-  margin-bottom: 1rem;
-  width: 50%;
+  margin-bottom: 2rem;
+  width: 60%;
+}
+.contact-section h2 {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 .information-section {
   background-color: var(--accent-color);
   padding: 2rem;
 }
+.information-section h2 {
+  color: var(--white-bg-text);
+  letter-spacing: 0.75px;
+}
+.top-contact-list {
+  font-size: 1.2rem;
+}
 form {
   grid-column: 2 / 4;
   width: 100%;
   display: grid;
-  background-color: var(--gray-200);
+  background-color: var(--white-bg-text);
 
   padding: 3rem 2rem;
 }
@@ -1019,31 +1012,34 @@ form {
 .tele {
   margin-bottom: 1.2rem;
 }
-label {
-  font-size: 1.2rem;
-  opacity: 0.3;
+label,
+.message label {
+  font-size: 1.5rem;
+  color: var(--heading-text);
 }
 input {
   padding: 5px;
   outline: none;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--white-bg-text);
   width: 95%;
   height: 60%;
+  margin-top: 0.3rem;
+  border-radius: 5px;
+  background-color: var(--gray-100);
 }
 .message {
   grid-column: 1 / 3;
   margin-bottom: 1.2rem;
-}
-.message label {
-  font-size: 1.2rem;
-  opacity: 0.9;
 }
 #message {
   height: 9.375rem;
   width: 100%;
   padding: 5px;
   outline: none;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--white-bg-text);
+  margin-top: 0.3rem;
+  border-radius: 5px;
+  background-color: var(--gray-100);
 }
 .submit {
   grid-column: 1 / 3;
@@ -1052,7 +1048,7 @@ input[type="submit"] {
   cursor: pointer;
   background-color: var(--accent-color);
   letter-spacing: 0.2rem;
-  /* padding: 2rem 1rem; */
+  padding: 2rem 1rem;
   outline: none;
   border: none;
   border-radius: 5px;
@@ -1061,7 +1057,7 @@ input[type="submit"] {
   width: 50%;
   transition: 0.3s linear;
   color: var(--white-color);
-  /* align-self: center; */
+  align-self: center;
   font-family: inter;
   font-size: 1.2rem;
   font-weight: 300;
