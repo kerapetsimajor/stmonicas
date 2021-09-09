@@ -842,7 +842,7 @@
     display: none;
   }
   .aside-links {
-    width: 50%;
+    width: 100%;
   }
   .interior-pages__text {
     padding-bottom: 2rem;
@@ -852,6 +852,13 @@
   }
   .event--single__page {
     grid-template-columns: 1fr;
+  }
+  .page-banner {
+    padding: 3rem 0 5rem 0;
+  }
+  .page-section {
+    width: 90%;
+    padding: 2rem 0;
   }
 
   /************************************/
