@@ -57,8 +57,9 @@ Medium: 11px
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 :root {
-  --primary-color: #cc0202;
-  --secondary-color: #a8233a;
+  /* Colors  */
+  --primary-color: #900;
+  --secondary-color: #800;
   --accent-color: #113276;
   --accent-hover: #0d2558;
 
@@ -74,7 +75,23 @@ Medium: 11px
   --gray-200: #e5e7eb;
   --gray-300: #d1d5db;
   --gray-400: #9ca3af;
-  --gray-500: ##6b7280;
+  --gray-500: #6b7280;
+
+  /* Typography */
+  --fs-h1: 3.25rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.875rem;
+  --fs-h4: 1.5rem;
+  --fs-h5: 1.25rem;
+  --fs-p: 1.125rem;
+
+  --fs-sm: 0.9rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 * {
@@ -113,6 +130,9 @@ body {
   padding: 0 3.2rem;
   margin: 0 auto;
 }
+.container--narrow {
+  width: 80%;
+}
 
 .grid {
   display: grid;
@@ -121,9 +141,9 @@ body {
   /* margin-bottom: 9.6rem; */
 }
 
-.grid:not(:last-child) {
+/* .grid:not(:last-child) {
   margin-bottom: 9.6rem;
-}
+} */
 
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
@@ -168,7 +188,7 @@ btn = 20
 .heading-secondary {
   font-size: 1.875rem;
   line-height: 1.2;
-  margin-bottom: 3.6rem;
+  margin-bottom: 2.6rem;
 }
 
 .heading-tertiary {
@@ -205,9 +225,10 @@ btn = 20
   display: inline-block;
 
   text-decoration: none;
-  font-size: 1.25rem;
-  font-weight: 600;
-  padding: 1.6rem 3.2rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  /* padding: 1.6rem 3.2rem; */
   border-radius: 5px;
 
   /* Only necessary for .btn */

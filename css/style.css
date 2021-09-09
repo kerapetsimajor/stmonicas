@@ -3,6 +3,7 @@
 /************************************/
 
 :root {
+  /* Colors  */
   --primary-color: #900;
   --secondary-color: #800;
   --accent-color: #113276;
@@ -21,30 +22,17 @@
   --gray-300: #d1d5db;
   --gray-400: #9ca3af;
   --gray-500: #6b7280;
+
+  /* Typography */
+  --fs-h1: 3.25rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.875rem;
+  --fs-h4: 1.5rem;
+  --fs-h5: 1.25rem;
+  --fs-p: 1.125rem;
+
+  --fs-sm: 0.9rem;
 }
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/* html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  font-family: "Roboto", sans-serif;
-  line-height: 1;
-  font-weight: 400;
-  color: var(--body-text);
-
-  /* Only works if there is nothing absolutely positioned in relation to body *
-  overflow-x: hidden;
-  overflow-y: hidden;
-} */
 
 /************************************/
 /* Top Navigation Bar */
@@ -57,7 +45,7 @@ main {
   justify-content: space-between;
   align-items: center;
   height: 4.8rem;
-  background-color: #0b1f49;
+  background-color: var(--accent-hover);
 
   padding: 2rem 4.8rem;
 }
@@ -106,11 +94,6 @@ main {
   list-style: none;
   gap: 3.8rem;
 }
-/* .top-social-links {
-  text-decoration: none;
-  font-size: 22px;
-  color: var(--white-color);
-} */
 .header-icon {
   color: var(--white-bg-text);
 }
@@ -166,8 +149,8 @@ main {
 
 .main-nav-link:link,
 .main-nav-link:visited {
-  font-weight: 700;
-  font-size: 1.195rem;
+  font-weight: 500;
+  font-size: var(--fs-h5);
 }
 
 .footer-nav-link:link,
@@ -238,7 +221,7 @@ main {
 .off-canvas a {
   padding: 0.5rem 2rem;
   text-decoration: none;
-  font-size: 1.5625rem;
+  font-size: var(--fs-h4);
   color: var(--white-bg-text);
   display: block;
   transition: 0.3s;
@@ -250,7 +233,7 @@ main {
   position: absolute;
   top: 2rem;
   right: 1.5625rem;
-  font-size: 2.25rem;
+  font-size: var(--fs-h4);
   margin-left: 3.125rem;
 }
 .nav-offcanvas {
@@ -258,7 +241,7 @@ main {
   margin-bottom: 2rem;
 }
 .offcanvas-social {
-  font-size: 41px;
+  font-size: var(--fs-h2);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -273,82 +256,152 @@ img {
   vertical-align: middle;
   border-radius: 5px;
 }
-.hero-slider {
+
+ul.slides {
+  display: block;
   position: relative;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
 }
-/* Hide the images by default */
-.hero-sliders {
+
+/* .slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+} */
+
+ul.slides input {
   display: none;
 }
 
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
+.slide-container {
+  display: block;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
+.slide-image {
+  display: block;
   position: absolute;
-  top: 50%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.slide-image img {
   width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  /* font-weight: bold;
-  font-size: 20px; */
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+  min-width: 100%;
+  height: 100%;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.hero-slider {
-  background: rgba(0, 0, 0, 0.8) url("../img/sliders/00.jpg") no-repeat
-    center/cover;
-  height: 70vh;
-}
-
-/* Number text (1/3 etc) */
-.hero-slider__text {
-  padding: 8px 12px;
+.carousel-controls {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 600px;
+  color: #fff;
 }
+
+.carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label {
+  opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+  opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.carousel-controls .next-slide {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+  display: block;
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+  opacity: 1;
+}
+
+input:checked + .slide-container .nav label {
+  display: block;
+}
+
 .hero-secondary__heading,
 .hero-primary__heading {
   text-align: center;
 }
 .hero-secondary__heading {
-  font-size: 3.875rem;
+  font-size: var(--fs-h1);
   font-weight: 500;
   margin-bottom: 2rem;
   letter-spacing: 2.75px;
   color: var(--white-color);
 }
 .hero-primary__heading {
-  font-size: 2.75rem;
+  font-size: var(--fs-h3);
   font-weight: 400;
   letter-spacing: 0.75px;
   margin-bottom: 0.5rem;
   color: #fdf2e9;
 }
 .hero-body__text {
-  font-size: 1.5rem;
+  font-size: var(--fs-p);
   font-weight: 400;
   text-align: center;
   padding-bottom: 2rem;
@@ -362,6 +415,13 @@ img {
   content: "";
   display: table;
   clear: both;
+}
+.hero-slider__text {
+  padding: 8px 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* School Life Features */
@@ -385,14 +445,14 @@ img {
   line-height: 1.8;
 }
 .featured--heading {
-  font-size: 1.5rem;
+  font-size: var(--fs-h4);
   font-weight: 600;
   margin-bottom: 0.725rem;
   color: var(--gray-300);
 }
 
 .featured--text {
-  font-size: 1.125rem;
+  font-size: var(--fs-h5);
   font-weight: 300;
   color: var(--white-bg-text);
 }
@@ -441,7 +501,7 @@ img {
 }
 .event-summary__month {
   display: block;
-  font-size: 1.5rem;
+  font-size: var(--fs-h4);
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
@@ -449,7 +509,7 @@ img {
 }
 .event-summary__day {
   display: block;
-  font-size: 2.02rem;
+  font-size: var(--fs-h3);
   font-weight: 700;
   text-align: center;
   color: var(--gray-200);
@@ -457,7 +517,7 @@ img {
 
 .event-summary__post-title,
 .event-summary__post-title a {
-  font-size: 1.2rem;
+  font-size: var(--fs-h4);
   font-weight: 500;
   margin-bottom: 0.75rem;
   color: var(--accent-color);
@@ -471,7 +531,7 @@ img {
   text-decoration: underline;
 }
 .event-summary__post-text {
-  font-size: 1rem;
+  font-size: var(--fs-p);
   font-weight: 400;
   line-height: 1.458rem;
 }
@@ -505,7 +565,7 @@ img {
   border-radius: 10px;
 }
 .principal-message {
-  font-size: 1.5rem;
+  font-size: var(--fs-h4);
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.75px;
@@ -574,76 +634,55 @@ span {
 .sports-section {
   padding: 5rem 0;
 }
-.sports-update__section,
-.sports-news__content {
+.sports-updates {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
-.sports-update__section {
-  gap: 3rem;
-}
-.sports-news__content {
-  align-items: flex-start;
-  gap: 1rem;
-}
-.sports-updates {
-  grid-template-rows: repeat(2, 1fr);
-  column-gap: 0 !important;
-  row-gap: 1.6rem !important;
+.post-cards {
+  grid-template-columns: repeat(3, 1fr);
   margin-bottom: 0 !important;
 }
-.sports-news__post,
-.sports-news__featured-img,
-.sports-news__img {
-  width: 100%;
-  height: auto;
-}
-.sports-news__featured-img {
-  max-width: 19rem;
-}
-.sports-news__img,
-.sports-news__post {
-  max-width: 19rem;
-}
-.sports-news__featured-heading {
-  color: var(--accent-color);
-  text-align: start;
-  margin: 0.725rem 0rem;
-}
-.sports__featured-text {
-  line-height: 1.4;
-  color: var(--gray-400);
-}
-.sports-news__post-heading {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 1.05rem;
-  letter-spacing: -0.12px;
-  color: var(--accent-color);
-}
-.sports-news__post-text {
-  font-size: 0.875rem;
-  line-height: 1.2;
-  color: var(--gray-400);
-}
 .el--1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / 4;
+  grid-column: 1/4;
 }
-.el--2 {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+.featured-card_image img,
+.card_image img {
+  max-width: 100%;
+  width: 100%;
+  vertical-align: middle;
+  border-radius: 0;
 }
-.el--3 {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+.post-card {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.el--4 {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
+.cards_item {
+  display: flex;
+  padding: 1rem;
 }
-
+.featured-card,
+.card {
+  box-shadow: 0px 0px 3px var(--gray-400);
+  overflow: hidden;
+}
+.card_content,
+.featured_content {
+  padding: 1rem;
+  background: var(--white-color);
+}
+.card_featured-title,
+.card_title {
+  margin-bottom: 0.5rem;
+}
+.card_title {
+  font-size: var(--fs-h5);
+  font-weight: 500;
+}
 /* School Results */
 .school-results__section {
   padding: 5rem 0;
@@ -669,12 +708,12 @@ span {
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 }
 .grade-heading {
-  font-size: 0.9375rem;
+  font-size: var(--fs-sm);
   font-weight: 400;
   text-align: center;
 }
 .grade-text {
-  font-size: 1.9375rem;
+  font-size: var(--fs-h3);
   font-weight: 600;
   text-align: center;
   color: var(--accent-color);
@@ -692,13 +731,13 @@ span {
 }
 
 .grade-12__heading {
-  font-size: 24px;
+  font-size: var(--fs-h4);
   font-weight: 500;
   color: var(--accent-color);
 }
 
 .grade-12__text {
-  font-size: 44px;
+  font-size: var(--fs-h1);
   font-weight: 900;
   color: var(--primary-color);
 }
@@ -760,6 +799,16 @@ span {
   background-color: #000;
   position: relative;
 }
+.page-section {
+  width: 80%;
+  padding: 5rem 0;
+  margin: 0 auto;
+}
+.single-breadcrum {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
 .page-banner__bg-image {
   opacity: 0.33;
   background-size: cover;
@@ -768,9 +817,6 @@ span {
   bottom: 0;
   left: 0;
   right: 0;
-}
-.container--narrow {
-  max-width: 80%;
 }
 .page-banner__title,
 .page-banner__intro {
@@ -799,7 +845,7 @@ span {
 }
 .metabox-p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
 }
 .interior-nav {
   background-color: #f4de89;
@@ -873,7 +919,7 @@ span {
 /************************************/
 .event-column {
   padding: 5rem;
-  max-width: 60rem;
+  max-width: 80%;
 }
 .event-page {
   padding-bottom: 1rem;
@@ -888,16 +934,79 @@ span {
 /************************************/
 /* Event Page */
 /************************************/
-.aside--img {
-  width: 100%;
-  height: auto;
-  max-width: 20rem;
-}
+
 .event--single__page {
-  margin-bottom: 1rem !important;
+  column-gap: 4rem;
 }
-.event-img--gallery {
-  margin-bottom: 5rem;
+
+/* Hide the images by default */
+.aside_wrapper {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.aside_prev,
+.aside_next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 0.625rem;
+  margin-top: -1.125rem;
+  color: white;
+  font-weight: bold;
+  font-size: var(--fs-h5);
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: var(--accent-color);
+}
+
+/* Position the "next button" to the right */
+.aside_next {
+  right: 9.175rem;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.aside_prev:hover,
+.aside_next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Container for image text */
+.aside_caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 1.25rem 1rem;
+  color: white;
+}
+
+.aside_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.aside_column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.aside_thumbnail {
+  opacity: 0.6;
+}
+
+.active,
+.aside_thumbnail:hover {
+  opacity: 1;
 }
 
 /************************************/
@@ -932,9 +1041,6 @@ figure img {
 /************************************/
 /* Blog Page */
 /************************************/
-.news-section {
-  padding: 5rem 0;
-}
 .post-item__title {
   margin-bottom: 2rem !important;
 }
@@ -978,7 +1084,7 @@ figure img {
   margin-bottom: 2rem;
 }
 .contact-us-text {
-  font-size: 1.2rem;
+  font-size: var(--fs-h5);
   font-weight: 400;
   margin-bottom: 2rem;
   width: 60%;
@@ -996,7 +1102,7 @@ figure img {
   letter-spacing: 0.75px;
 }
 .top-contact-list {
-  font-size: 1.2rem;
+  font-size: var(--fs-p);
 }
 form {
   grid-column: 2 / 4;
@@ -1059,7 +1165,7 @@ input[type="submit"] {
   color: var(--white-color);
   align-self: center;
   font-family: inter;
-  font-size: 1.2rem;
+  font-size: var(--fs-h5);
   font-weight: 300;
   text-align: center;
 }

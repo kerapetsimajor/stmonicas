@@ -1,14 +1,20 @@
 /**************************/
 /* BELOW 1344px (Smaller desktops) */
 /**************************/
-@media (max-width: 84em) {
-}
+/* @media (max-width: 84em) {
+  .interior-pages__text {
+    padding-bottom: 0;
+  }
+} */
 
 /**************************/
 /* BELOW 1200px (Landscape Tablets) */
 /**************************/
-@media (max-width: 75em) {
-}
+/* @media (max-width: 75em) {
+  .interior-pages__text {
+    padding-bottom: 0;
+  }
+} */
 
 /**************************/
 /* BELOW 1120px (Tablets) */
@@ -84,19 +90,14 @@
   .logo {
     height: 5rem;
   }
-  /* body {
-    position: relative;
-  } */
   .main-nav {
     display: none;
   }
-
   #offCanvasNav,
   .btn-mobile-nav {
     display: block;
     z-index: 9999;
   }
-
   /* --- Slider --- */
   #content-slider .slider-thumb img {
     display: none;
@@ -131,9 +132,6 @@
     grid-template-columns: 1fr;
     row-gap: 0rem;
   }
-  /* .full-width-list.events-content {
-    max-width: 70%;
-  } */
   .event-summary {
     margin-bottom: 3.5rem;
   }
@@ -184,40 +182,8 @@
   }
 
   /* --- Sports Update Section --- */
-  .sports-section {
-    padding: 3rem 0;
-  }
   .sports-updates {
-    margin-bottom: 2rem;
-  }
-  .sports-update__section {
     flex-wrap: wrap;
-  }
-  .sports-news__featured-img {
-    max-width: 100%;
-    width: 90%;
-    height: auto;
-  }
-  .sports-news__post {
-    max-width: 90%;
-  }
-  .sports-news__featured-heading {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 1.725rem 0rem;
-  }
-  .sports__featured-text {
-    font-size: 1.279rem;
-  }
-  .sports-news__img,
-  .sports-news__post {
-    max-width: 100%;
-  }
-  .sports-news__post-heading {
-    font-size: 1.275rem;
-  }
-  .sports-news__post-text {
-    font-size: 1.2575rem;
   }
 
   /* --- School Results Section --- */
@@ -261,8 +227,15 @@
     grid-template-columns: 1fr;
     width: 80%;
   }
+  .aside {
+    padding: 3rem 5rem;
+  }
   .aside-links {
     width: 50%;
+  }
+  .aside_prev,
+  .aside_next {
+    display: none;
   }
   .interior-pages__text {
     padding-bottom: 2rem;
@@ -397,40 +370,14 @@
   }
 
   /* --- Sports Update Section --- */
-  .sports-section {
-    padding: 3rem 0;
-  }
   .sports-updates {
-    margin-bottom: 2rem;
-  }
-  .sports-update__section {
     flex-wrap: wrap;
   }
-  .sports-news__featured-img {
-    max-width: 100%;
-    width: 90%;
-    height: auto;
+  .post-cards {
+    grid-template-columns: repeat(1, 1fr) !important;
   }
-  .sports-news__post {
-    max-width: 90%;
-  }
-  .sports-news__featured-heading {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 1.725rem 0rem;
-  }
-  .sports__featured-text {
-    font-size: 1.279rem;
-  }
-  .sports-news__img,
-  .sports-news__post {
-    max-width: 100%;
-  }
-  .sports-news__post-heading {
-    font-size: 1.275rem;
-  }
-  .sports-news__post-text {
-    font-size: 1.2575rem;
+  .el--1 {
+    grid-column: unset !important;
   }
 
   /* --- School Results Section --- */
@@ -463,35 +410,6 @@
     width: 80px;
   }
 
-  /* --- Sliders --- */
-  #content-slider .slider .head {
-    display: none;
-  }
-  #content-slider .slider-dot {
-    display: none;
-  }
-  #content-slider .slider-arrow-control {
-    display: block;
-  }
-  #content-slider #thumb-2:focus {
-    opacity: 1;
-  }
-  #thumb-2:focus ~ #thumb-5 {
-    display: none;
-  }
-  #content-slider #thumb-3:focus {
-    opacity: 1;
-  }
-  #thumb-3:focus ~ #thumb-5 {
-    display: none;
-  }
-  #content-slider #thumb-4:focus {
-    opacity: 1;
-  }
-  #thumb-4:focus ~ #thumb-5 {
-    display: none;
-  }
-
   /************************************/
   /* Interior Page */
   /************************************/
@@ -501,6 +419,10 @@
   }
   .aside-links {
     width: 40%;
+  }
+  .aside_prev,
+  .aside_next {
+    display: none;
   }
   .interior-pages__text {
     padding-bottom: 2rem;
@@ -513,6 +435,9 @@
   }
   .event--single__page {
     grid-template-columns: 1fr;
+  }
+  .metabox--position-up {
+    transform: translateY(-100%);
   }
 
   /************************************/
@@ -642,41 +567,14 @@
   }
 
   /* --- Sports Update Section --- */
-  .sports-section {
-    padding: 3rem 2.5rem;
-  }
-  .sports-update__section {
-    flex-direction: column;
-  }
   .sports-updates {
-    grid-template-rows: none;
-    grid-template-columns: 1fr;
+    flex-wrap: wrap;
+  }
+  .post-cards {
+    grid-template-columns: repeat(1, 1fr) !important;
   }
   .el--1 {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    margin-left: -1rem;
-    grid-column: 0;
-    grid-row: 0;
-  }
-  .sports-news__featured-img {
-    max-width: 100%;
-    width: 70%;
-    height: auto;
-  }
-  .sports-news__post {
-    width: 100%;
-  }
-  .el--1,
-  .el--2,
-  .el--3,
-  .el--4 {
-    grid-column: 0;
-    grid-row: 0;
-  }
-  .sports-news__content {
-    flex-direction: column;
+    grid-column: unset !important;
   }
 
   /* School Results */
@@ -729,8 +627,15 @@
     grid-template-columns: 1fr;
     width: 90%;
   }
+  .metabox--position-up {
+    transform: translateY(-100%);
+  }
   .aside-links {
     width: 50%;
+  }
+  .aside_prev,
+  .aside_next {
+    display: none;
   }
   .interior-pages__text {
     padding-bottom: 2rem;
@@ -873,41 +778,14 @@
   }
 
   /* --- Sports Update Section --- */
-  .sports-section {
-    padding: 3rem 2.5rem;
-  }
-  .sports-update__section {
-    flex-direction: column;
-  }
   .sports-updates {
-    grid-template-rows: none;
-    grid-template-columns: 1fr;
+    flex-wrap: wrap;
+  }
+  .post-cards {
+    grid-template-columns: repeat(1, 1fr) !important;
   }
   .el--1 {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    margin-left: -1rem;
-    /* grid-column: 0;
-    grid-row: 0; */
-  }
-  .sports-news__featured-img {
-    max-width: 100%;
-    width: 70%;
-    height: auto;
-  }
-  .sports-news__post {
-    width: 100%;
-  }
-  /* .el--1,
-  .el--2,
-  .el--3,
-  .el--4 {
-    grid-column: 0;
-    grid-row: 0;
-  } */
-  .sports-news__content {
-    flex-direction: column;
+    grid-column: unset !important;
   }
 
   /* --- School Results Section --- */
@@ -952,6 +830,16 @@
   .interior-content {
     grid-template-columns: 1fr;
     width: 100%;
+  }
+  .metabox--position-up {
+    transform: translateY(-100%);
+  }
+  .aside {
+    padding: 2rem;
+  }
+  .aside_prev,
+  .aside_next {
+    display: none;
   }
   .aside-links {
     width: 50%;
