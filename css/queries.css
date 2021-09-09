@@ -264,7 +264,7 @@
   }
 
   .container--narrow {
-    max-width: 100%;
+    max-width: 80%;
   }
   /* --- Header --- */
   .top-nav {
@@ -460,7 +460,7 @@
     padding: 2rem;
   }
   .container--narrow {
-    max-width: 100%;
+    max-width: 90%;
   }
   /* --- Header --- */
   .top-nav {
@@ -674,7 +674,7 @@
     padding: 2rem;
   }
   .container--narrow {
-    max-width: 100%;
+    max-width: 90%;
   }
   /* --- Header --- */
   .top-nav {
