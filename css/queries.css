@@ -631,7 +631,7 @@
     transform: translateY(-100%);
   }
   .aside-links {
-    width: 50%;
+    width: 100%;
   }
   .aside_prev,
   .aside_next {
@@ -645,6 +645,13 @@
   }
   .event--single__page {
     grid-template-columns: 1fr;
+  }
+  .page-banner {
+    padding: 3rem 0 5rem 0;
+  }
+  .page-section {
+    width: 90%;
+    padding: 2rem 0;
   }
 
   /************************************/
