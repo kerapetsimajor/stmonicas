@@ -146,85 +146,79 @@
 
     <main>
       <div class="carousel">
-        <ul class="slides">
-
-          <input type="radio" name="radio-buttons" id="img-1" checked />
-          <li class="slide-container">
-
-            <div class="slide-image">
-              <img src="img/sliders/00.jpg" class="hero-img">
-            </div>
-
-            <div class="carousel-controls">
-              <label for="img-3" class="prev-slide">
-                <span>&lsaquo;</span>
-              </label>
-              <label for="img-2" class="next-slide">
-                <span>&rsaquo;</span>
-              </label>
-            </div>
-
-          </li>
-
-          <input type="radio" name="radio-buttons" id="img-2"/>
-          <li class="slide-container">
-
-            <div class="slide-image">
-
-              <div class="hero-slider__text">
-                <h2 class="hero-secondary__heading">Welcome 3!</h2>
-                <h1 class="hero-primary__heading">
-                  St Monica's Diocesan School
-                </h1>
-                <p class="hero-body__text">
-                  We think your child will like it here.
-                </p>
-                <div class="hero-cta__btn">
-                  <a class="btn btn--full" href="#">Educate your child</a>
-                </div>
+      <ul class="slides">
+        <input type="radio" name="radio-buttons" id="img-1" checked />
+        <li class="slide-container">
+          <div class="slide-image img__1">
+            <div class="hero_content">
+              <h2 class="heading-secondary hero-heading">Welcome!</h2>
+              <h1 class="heading-primary hero-title">St Monica's Diocesan School</h1>
+              <h4 class="subheading hero-p">We think your child will like it here.</h4>
+              <div class="hero-cta__btn">
+                <a href="#" class="btn btn--full">Educate your child</a>
               </div>
-
-              <img src="img/sliders/2.jpg" class="hero-img"/>
             </div>
+          </div>
+          <div class="carousel-controls">
+            <label for="img-3" class="prev-slide">
+              <span><ion-icon class="list-icon hero_icons" name="chevron-back-circle"></ion-icon></span>
+            </label>
+            <label for="img-2" class="next-slide">
+              <span><ion-icon class="list-icon hero_icons" name="chevron-forward-circle"></ion-icon></span>
+            </label>
+          </div>
+        </li>
 
-            <div class="carousel-controls">
-              <label for="img-1" class="prev-slide">
-                <span>&lsaquo;</span>
-              </label>
-              <label for="img-3" class="next-slide">
-                <span>&rsaquo;</span>
-              </label>
-            </div>
-          </li>
-
-          <input type="radio" name="radio-buttons" id="img-3" />
-          <li class="slide-container">
-            <div class="slide-image">
-              <div class="hero-slider__text">
-                <h2 class="hero-secondary__heading">Welcome 2!</h2>
-                <h1 class="hero-primary__heading">
-                  St Monica's Diocesan School
-                </h1>
-                <p class="hero-body__text">
-                  We think your child will like it here.
-                </p>
-                <div class="hero-cta__btn">
-                  <a class="btn btn--full" href="#">Educate your child</a>
-                </div>
+        <input type="radio" name="radio-buttons" id="img-2" checked />
+        <li class="slide-container">
+          <div class="slide-image img__2">
+            <div class="hero_content">
+              <h2 class="heading-secondary hero-heading">Welcome 2!</h2>
+              <h1 class="heading-primary hero-title">St Monica's Diocesan School</h1>
+              <p class="body-text hero-p">We think your child will like it here.</p>
+              <div class="hero-cta__btn">
+                <a href="#" class="btn btn--full">Educate your child</a>
               </div>
-              <img src="img/sliders/3.jpg" class="hero-img"/>
             </div>
-            <div class="carousel-controls">
-              <label for="img-2" class="prev-slide">
-                <span>&lsaquo;</span>
-              </label>
-              <label for="img-1" class="next-slide">
-                <span>&rsaquo;</span>
-              </label>
+          </div>
+          <div class="carousel-controls">
+            <label for="img-1" class="prev-slide">
+              <span><span><ion-icon class="list-icon hero_icons" name="chevron-back-circle"></ion-icon></span>
+            </label>
+            <label for="img-3" class="next-slide">
+              <span><ion-icon class="list-icon hero_icons" name="chevron-forward-circle"></ion-icon></span>
+            </label>
+          </div>
+        </li>
+
+        <input type="radio" name="radio-buttons" id="img-3" checked />
+        <li class="slide-container">
+          <div class="slide-image img__3">
+            <div class="hero_content">
+              <h2 class="heading-secondary hero-heading">Welcome 3!</h2>
+              <h1 class="heading-primary hero-title">St Monica's Diocesan School</h1>
+              <p class="body-text hero-p">We think your child will like it here.</p>
+              <div class="hero-cta__btn">
+                <a href="#" class="btn btn--full">Educate your child</a>
+              </div>
             </div>
-          </li>
-        </ul>
-      </div>
+          </div>
+          <div class="carousel-controls">
+            <label for="img-2" class="prev-slide">
+              <span><ion-icon class="list-icon hero_icons" name="chevron-back-circle"></ion-icon></span>
+            </label>
+            <label for="img-1" class="next-slide">
+              <span><span><ion-icon class="list-icon hero_icons" name="chevron-forward-circle"></ion-icon></span>
+            </label>
+          </div>
+        </li>
+        <div class="carousel-dots">
+          <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+          <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+          <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+        </div>
+      </ul>
+    </div>
 
       <section class="school-life">
         <div class="container">
