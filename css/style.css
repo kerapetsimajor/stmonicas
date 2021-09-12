@@ -1035,7 +1035,7 @@ span {
 }
 .page-section {
   width: 80%;
-  padding: 5rem 0;
+  padding: 2.5rem 0;
   margin: 0 auto;
 }
 .single-breadcrum {
@@ -1056,15 +1056,24 @@ span {
 .page-banner__intro {
   color: var(--white-color);
 }
+.page-banner__content,
+.breadcrum {
+  width: 80%;
+}
+
 .page-banner__content {
   position: relative;
   z-index: 2;
+}
+.breadcrum {
+  margin: 0 auto;
+  padding: 0 3.2rem;
 }
 .metabox {
   border-radius: 3px;
   padding: 10px 15px;
   display: inline-block;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.07);
+  /* box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.07); */
 }
 .metabox--position-up {
   position: relative;
@@ -1297,6 +1306,12 @@ figure img {
 .blog-post--title:hover {
   color: var(--accent-hover);
   text-decoration: none;
+}
+.post-img_text {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
 }
 .blog-rm {
   padding: 1rem 2rem !important;

@@ -1,10 +1,8 @@
-/**************************/
+/* ************************ */
 /* BELOW 1344px (Smaller desktops) */
 /**************************/
 /* @media (max-width: 84em) {
-  .interior-pages__text {
-    padding-bottom: 0;
-  }
+  
 } */
 
 /**************************/
@@ -68,6 +66,7 @@
   html {
     font-size: 80.5%;
   }
+
   .container--narrow {
     max-width: 90%;
   }
@@ -223,9 +222,18 @@
   /************************************/
   /* Interior Page */
   /************************************/
+  .page-section {
+    width: 90%;
+  }
   .interior-content {
     grid-template-columns: 1fr;
     width: 80%;
+  }
+  .page-banner__content {
+    width: 90%;
+  }
+  .breadcrum {
+    padding: 0;
   }
   .aside {
     padding: 3rem 5rem;
@@ -264,7 +272,7 @@
   }
 
   .container--narrow {
-    max-width: 80%;
+    width: 90%;
   }
   /* --- Header --- */
   .top-nav {
@@ -418,7 +426,7 @@
     width: 90%;
   }
   .aside-links {
-    width: 40%;
+    width: 80%;
   }
   .aside_prev,
   .aside_next {
@@ -436,8 +444,11 @@
   .event--single__page {
     grid-template-columns: 1fr;
   }
+  .breadcrum {
+    padding: 0 3.2rem;
+  }
   .metabox--position-up {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
   }
 
   /************************************/
@@ -460,7 +471,7 @@
     padding: 2rem;
   }
   .container--narrow {
-    max-width: 90%;
+    width: 90%;
   }
   /* --- Header --- */
   .top-nav {
@@ -627,8 +638,15 @@
     grid-template-columns: 1fr;
     width: 90%;
   }
+  .breadcrum {
+    margin-bottom: -5rem;
+    padding: 0 2rem;
+  }
   .metabox--position-up {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
+  }
+  .post-img_text {
+    flex-direction: column-reverse;
   }
   .aside-links {
     width: 100%;
@@ -652,6 +670,9 @@
   .page-section {
     width: 90%;
     padding: 2rem 0;
+  }
+  .post-img_text {
+    flex-direction: column-reverse;
   }
 
   /************************************/
@@ -839,7 +860,7 @@
     width: 100%;
   }
   .metabox--position-up {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
   }
   .aside {
     padding: 2rem;
@@ -866,6 +887,9 @@
   .page-section {
     width: 90%;
     padding: 2rem 0;
+  }
+  .post-img_text {
+    flex-direction: column-reverse;
   }
 
   /************************************/

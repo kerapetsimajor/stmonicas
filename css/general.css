@@ -130,9 +130,9 @@ body {
   padding: 0 3.2rem;
   margin: 0 auto;
 }
-.container--narrow {
+/* .container--narrow {
   width: 80%;
-}
+} */
 
 .grid {
   display: grid;
