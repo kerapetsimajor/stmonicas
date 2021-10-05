@@ -1,13 +1,26 @@
-<!DOCTYPE html>
+<?php
+/**
+ * The header for our theme
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package stmonicas
+ */
+
+?>
+<!doctype html>
 <html <?php language_attributes(); ?>>
-  <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php wp_head(); ?>
-  </head>
-  <body <?php body_class(); ?>>
-  <body>
-    <div class="top-nav">
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+<div class="top-nav">
       <div class="top-contact">
         <ul class="top-contact-items">
           <ul class="top-contact-lists">
@@ -39,7 +52,7 @@
           <li><a href="applications.html" class="top-nav-list">Applications</a></li>
           <li><a href="#" class="top-nav-list">Calender</a></li>
           <li><a href="#" class="top-nav-list">YearBook</a></li>
-          <li><a href="policies.html" class="top-nav-list">Policies</a></li>
+          <li><a href="<?php echo site_url( 'policies' ); ?>" class="top-nav-list">Policies</a></li>
         </ul>
       </div>
       <ul class="top-social-items">
@@ -56,20 +69,20 @@
       </ul>
     </div>
     <header class="header">
-      <a href="<?php echo site_url(); ?>">
-        <img class="logo" alt="School logo" src="<?php echo get_theme_file_uri('/img/school logo.jpg'); ?>"/>
-      </a>
+      <a href="<?php echo site_url( '/' ); ?>">
+        <img class="logo" alt="School logo" src="<?php echo get_theme_file_uri('/img/school logo.jpg'); ?>" />
+			</a>
 
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="<?php echo site_url(); ?>">Home</a></li>
-          <li><a class="main-nav-link" href="<?php echo site_url('/about-us'); ?>">About Us</a></li>
+          <li><a class="main-nav-link" href="<?php echo site_url( '/' ); ?>">Home</a></li>
+          <li><a class="main-nav-link" href="<?php echo site_url( 'about-us' ); ?>">About Us</a></li>
           <li>
-            <a class="main-nav-link" href="events.html">Events</a>
+            <a class="main-nav-link" href="<?php echo get_post_type_archive_link('event') ?>">Events</a>
           </li>
-          <li><a class="main-nav-link" href="sports.html">Sports</a></li>
-          <li><a class="main-nav-link" href="<?php echo site_url('/news'); ?>">News</a></li>
-          <li><a class="main-nav-link" href="contact.html">Contact Us</a></li>
+          <li><a class="main-nav-link" href="<?php echo get_post_type_archive_link('sport') ?>">Sports</a></li>
+          <li><a class="main-nav-link" href="<?php echo site_url( 'news' ); ?>">News</a></li>
+          <li><a class="main-nav-link" href="<?php echo site_url( 'contact' ); ?>">Contact Us</a></li>
           <li>
             <a class="main-nav-link nav-cta" href="applications.html">Apply</a>
           </li>
@@ -77,17 +90,18 @@
       </nav>
 
       <ul id="offCanvasNav" class="off-canvas">
+        
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html"><img src="img/school logo.jpg" height="4.375rem" alt="" class="logo"></a>
+        <a href="<?php echo site_url( '/' ); ?>"><img src="<?php echo get_theme_file_uri('/img/school logo.jpg'); ?>" height="4.375rem" alt="" class="logo"></a>
 
         <hr class="section-break">
 
-        <a href="<?php echo site_url(); ?>">Home</a>
-        <a href="<?php echo site_url('/about-us'); ?>">About Us</a>
-        <a href="<?php echo site_url('/events.html'); ?>">Events</a>
-        <a href="<?php echo site_url( '/sports.html'); ?>">Sports</a>
-        <a href="<?php echo site_url( '/news.html'); ?>">News</a>
-        <a href="<?php echo site_url( '/contact-us.html'); ?>">Contact Us</a>
+        <a href="<?php echo site_url( '/' ); ?>">Home</a>
+        <a href="<?php echo site_url( 'about-us' ); ?>">About Us</a>
+        <a href="<?php echo get_post_type_archive_link('event') ?>">Events</a>
+        <a href="<?php echo get_post_type_archive_link('sport') ?>">Sports</a>
+        <a href="<?php echo site_url( 'news' ); ?>">News</a>
+        <a href="<?php echo site_url( 'contact' ); ?>">Contact Us</a>
 
         <hr class="section-break">
 
@@ -95,7 +109,7 @@
         <a href="applications.html">Applications</a>
         <a href="#">Calender</a>
         <a href="#">YearBook</a>
-        <a href="policies.html">Policies</a>
+        <a href="<?php echo site_url( 'policies' ); ?>">Policies</a>
 
         <hr class="section-break">
 
@@ -120,5 +134,4 @@
       <button id="main" class="btn-mobile-nav" onclick="openNav()" >
         <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
       </button>
-
     </header>
